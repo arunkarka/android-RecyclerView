@@ -19,39 +19,6 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/sample_main_layout">
-
-    <ViewAnimator
-          android:id="@+id/sample_output"
-          android:layout_width="match_parent"
-          android:layout_height="50dp"
-          android:layout_weight="1"
-        >
-
-        <ScrollView
-              style="@style/Widget.SampleMessageTile"
-              android:layout_width="match_parent"
-              android:layout_height="50dp">
-
-            <TextView
-                  style="@style/Widget.SampleMessage"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/intro_message" />
-        </ScrollView>
-
-        <fragment
-            android:name="com.example.android.common.logger.LogFragment"
-            android:id="@+id/log_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </ViewAnimator>
-
-    <View
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="@android:color/darker_gray" />
-
     <FrameLayout
           android:id="@+id/sample_content_fragment"
           android:layout_weight="2"
