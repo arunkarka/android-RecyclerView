@@ -17,5 +17,5 @@
 
 <resources>
     <string name="app_name">RecyclerView</string>
-    <string name="intro_message">Shark Feed</string>
+    <string name="intro_message">Shark Feed Branch</string>
 </resources>
