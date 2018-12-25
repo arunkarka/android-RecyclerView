@@ -95,4 +95,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public int getItemCount() {
         return mDataSet.length;
     }
+
+    // Clean all elements of the recycler
+    public void clear() {
+        //items.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items -- change to type used
+    //public void addAll(List<Tweet> list) {
+    public void addAll() {
+        //items.addAll(list);
+        notifyDataSetChanged();
+    }
 }
