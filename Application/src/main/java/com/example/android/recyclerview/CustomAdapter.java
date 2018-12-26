@@ -22,7 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 /**
  * Provide views to RecyclerView with data from mDataSet.
@@ -37,7 +37,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
      * Provide a reference to the type of views that you are using (custom ViewHolder)
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textView;
+        private final ImageView sharkImageView;
 
         public ViewHolder(View v) {
             super(v);
@@ -48,11 +48,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                     Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
                 }
             });
-            textView = (TextView) v.findViewById(R.id.textView);
+            sharkImageView = (ImageView) v.findViewById(R.id.shark_image_view);
         }
 
-        public TextView getTextView() {
-            return textView;
+        public ImageView getSharkImageView() {
+            return sharkImageView;
         }
     }
     // END_INCLUDE(recyclerViewSampleViewHolder)
@@ -72,7 +72,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view.
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
+                .inflate(R.layout.image_row_item, viewGroup, false);
 
         return new ViewHolder(v);
     }
@@ -86,7 +86,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
-        viewHolder.getTextView().setText(mDataSet[position]);
+        //viewHolder.getSharkImageView().setImageDrawable();
     }
     // END_INCLUDE(recyclerViewOnBindViewHolder)
 
